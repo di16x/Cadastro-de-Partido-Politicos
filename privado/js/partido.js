@@ -1,13 +1,13 @@
 
-const formPartido = document.getElementById('Forms');
+const formPartido = document.getElementById('forms');
 formPartido.onsubmit = validarCampos;
-const enderecoAPI = 'http://localhost:4000/clientes';
+const enderecoAPI = 'http://localhost:4000/partido';
 
 buscarTodosPartidos();
 
 var motivoAcao = "CADASTRAR";
 
-function gravarCliente(){
+function gravarPartido(){
     const objetoPartido = {
         nome: document.getElementById('nome').value,
         sigla: document.getElementById('sigla').value,
@@ -40,8 +40,8 @@ function selecionarPartido(nome, sigla, num_registro, motivo) {
 
    
     document.getElementById('nome').value = nome;
-    document.getElementById('sigla').value = endereco;
-    document.getElementById('num_registro').value = cidade;
+    document.getElementById('sigla').value = sigla;
+    document.getElementById('num_registro').value = num_registro;
    
 
     motivoAcao = motivo;
@@ -114,7 +114,7 @@ function buscarTodosPartidos(){
     })
     .then((respostaAPI) => {
         if (respostaAPI.status == true) {
-            exibirTabelaPartidos(respostaAPI.listaClientes);
+            exibirTabelaPartidos(respostaAPI.listaPartidos);
         }
         else{
             exibirMensagem(respostaAPI.mensagem, 'red');
@@ -150,7 +150,7 @@ function validarCampos(evento){
         }
         
         formPartido.reset();
-        buscarTodosClientes();
+        buscarTodosPartidos();
         return true;
     }
     else{
@@ -195,7 +195,7 @@ function exibirTabelaPartidos(listaPartidos){
                
                 <td>
                     <button onclick="selecionarPartido('${partido.nome}','${partido.sigla}','${partido.num_registro}','EDITAR')">Alterar</button>
-                    <button onclick="selecionarPartido('${partido.nome}','${partido.sigla}','${partido.num_registro},'EXCLUIR')">Excluir</button>
+                    <button onclick="selecionarPartido('${partido.nome}','${partido.sigla}','${partido.num_registro}','EXCLUIR')">Excluir</button>
                 </td>
             `;
             corpo.appendChild(linha);
