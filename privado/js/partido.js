@@ -25,13 +25,13 @@ function gravarPartido(){
         return resposta.json();
     }).then((respostaAPI) => {
         if (respostaAPI.status == true) {
-            exibirMensagem(respostaAPI.mensagem, 'green');
+            exibirMensagem(respostaAPI.mensagem, 'black');
         }
         else{
-            exibirMensagem(respostaAPI.mensagem, 'red');
+            exibirMensagem(respostaAPI.mensagem, 'black');
         }
     }).catch((erro) => {
-        exibirMensagem(erro, 'yellow');
+        exibirMensagem(erro, 'black');
     });
 
 }
@@ -68,13 +68,13 @@ function excluirPartido(){
         return resposta.json();
     }).then((respostaAPI) => {
         if (respostaAPI.status == true) {
-            exibirMensagem(respostaAPI.mensagem, 'green');
+            exibirMensagem(respostaAPI.mensagem, 'black');
         }
         else{
-            exibirMensagem(respostaAPI.mensagem, 'red');
+            exibirMensagem(respostaAPI.mensagem, 'black');
         }
     }).catch((erro) => {
-        exibirMensagem(erro, 'yellow');
+        exibirMensagem(erro, 'black');
     });
 }
 

@@ -1,13 +1,4 @@
-.div-login {
-    background-color: rgba(142, 125, 170, 0.671);
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 50vh; 
-    
-}
+
 
 #usuario {
     padding: 10px;
@@ -20,21 +11,24 @@
 }
 
 .p-login {
-    color: white;
+    color: #1aac9fb9;
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .botao-menu {
-    
-    height: 100px;
-    width:  200px;
+    background-color: #1aac9fb9;
+    padding: 10px;
+    height: 300px;
+    width:  350px;
     
     
 }
 
 .div-menu{
-    background-color: rgba(142, 125, 170, 0.671);
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -49,7 +43,7 @@ label {
 }
 
 .container {
-    background-color: rgba(84, 82, 185, 0.712);
+    background-color:aliceblue;
     padding: 20px;
     border-radius: 8px;
     max-width: 600px;
@@ -61,4 +55,54 @@ label {
     font-size: 18px;
 }
 
+body{
+    background-color: #1aac9fb9;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    }
+    
+.botaoConfirmar1{
+   background-color:  #1aac9fb9;;
+   color: white;
+   padding: 5px;
+   border-radius: 10px;
+}
+h1{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #1aac9fb9;
+}
+.navbar {
+    background-color: #333; 
+    color: white; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #333; 
+    color: white; 
+    z-index: 1000; 
+}
 
+.container_nav {
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 10px; 
+    padding-top: 60px; 
+}
+.nav-links {
+    list-style: none; 
+    display: flex; 
+}
+
+.nav-links li {
+    margin: 0 15px; 
+}
+.nav-links a {
+    text-decoration: none; 
+    color: white; 
+   
+}
